@@ -37,7 +37,9 @@ class ViewController: UIViewController {
             newlyCreatedFace.center.y += travView.frame.origin.y
             newlyCreatedFaceInitialCenter = newlyCreatedFace.center
         } else if sender.state == UIGestureRecognizerState.changed {
-            newlyCreatedFace.center = CGPoint(x: (newlyCreatedFaceInitialCenter?.x)! + translation.x, y: newlyCreatedFace.center.y + translation.y)
+            newlyCreatedFace.center = CGPoint(x: (newlyCreatedFaceInitialCenter?.x)!, y: newlyCreatedFace.center.y + translation.y)
+        } else if sender.state == UIGestureRecognizerState.ended {
+            
         }
     }
     
